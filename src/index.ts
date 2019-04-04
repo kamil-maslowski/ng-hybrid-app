@@ -7,3 +7,6 @@ angular
     .module("app",[])
     .component(AppComponent.selector, new AppComponent())
     .component(WhatAmIComponent.selector, new WhatAmIComponent());
+
+angular
+    .bootstrap(document, ['app']);
