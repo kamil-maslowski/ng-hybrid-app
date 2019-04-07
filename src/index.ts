@@ -1,9 +1,9 @@
-import * as angular from 'angular';
+import 'core-js/proposals/reflect-metadata';
+import 'zone.js';
 
-import { AppComponent } from './components/app/app.component';
-import { WhatAmIComponent } from './components/whatAmI/whatAmI.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-angular
-    .module("app",[])
-    .component(AppComponent.selector, new AppComponent())
-    .component(WhatAmIComponent.selector, new WhatAmIComponent());
+import './ajs.module';
+import { AppModule } from './app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
